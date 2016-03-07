@@ -49,8 +49,12 @@ Image = React.createClass({
 
           //<input placeholder="Caption"  type="text"/>
       <div className="card image-container">
+        <div className="fixed-action-btn click-to-toggle" style={{position: "absolute", display:"inline-block", right: '10px', top: '10px', paddingTop: '0px'}}>
+          <a className="waves-effect waves-light modal-trigger btn-floating red" onClick={this.props.onFocus} >
+            <i className="large mdi-content-remove"></i>
+          </a>
+        </div>
         <div className="card-image waves-effect waves-block waves-light">
-          <a style={{height:'37px', position: 'absolute', right:'10px', top:'10px'}} onClick={this.props.onFocus} className="btn-floating btn waves-effect waves-light red"><i className="mdi-content-remove"></i></a>
           <img className="upload-image" src={this.props.image.imageurl}/>
         </div>
 
@@ -61,6 +65,8 @@ Image = React.createClass({
     );
   }
 });
+          //<a style={{height:'37px', position: 'absolute', right:'10px', top:'10px'}} onClick={this.props.onFocus} className="btn-floating btn waves-effect waves-light red"><i className="mdi-content-remove"></i></a>
+
 
 /*
   Class to handle individual services for each image
