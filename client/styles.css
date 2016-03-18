@@ -99,8 +99,8 @@ footer {
 .image-container {
   text-align: center;
   width: 200px;
-  margin-left: 5px;
-  margin-right: 5px;
+  /*margin-left: 5px;*/
+  margin-right: 10px;
   min-height: 259px;
 }
 

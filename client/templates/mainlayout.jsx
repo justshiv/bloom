@@ -19,16 +19,13 @@ MainLayout = React.createClass({
   //attribute of the [Materialize](http://materializecss.com/) `sideNav` element
   //and append to the generated header
   componentDidMount() {
-    $('head').append('<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/css/bootstrap-tour-standalone.css">');
+    //$('head').append('<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/css/bootstrap-tour-standalone.css">');
     $(".button-collapse").sideNav({
       closeOnClick: true //closes when we click things
     });
 
     $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
     $('head').append('<link rel="shortcut icon" type="image/png" href="favicon.png">');
-    $.getScript("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/js/bootstrap-tour-standalone.js", function(){
-
-    });
   },
 
 

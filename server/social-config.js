@@ -1,23 +1,24 @@
 ServiceConfiguration.configurations.remove({
-    $or: [ {service: "facebook"}, {service: "twitter"}, {service: "google"} ]
+  $or: [ {service: "facebook"}, {service: "twitter"}, {service: "google"} ]
 });
  
 ServiceConfiguration.configurations.insert({
-    service: 'facebook',
-    appId: '1538811913098172',
-    secret: '09440da7720f33c4d05bb58b8d67fd45'
+  service: 'facebook',
+  appId: '1538811913098172',
+  secret: '09440da7720f33c4d05bb58b8d67fd45'
 });
 
 ServiceConfiguration.configurations.insert({
-    "service": "google",
-    "clientId": "741984941520-9mn97jjvu3vsqbghjiruebeop96cqq15.apps.googleusercontent.com",
-    "secret": "HvdOe3C8l248AzZg49thP062"
+  "service": "google",
+  "clientId": "741984941520-9mn97jjvu3vsqbghjiruebeop96cqq15.apps.googleusercontent.com",
+  "secret": "HvdOe3C8l248AzZg49thP062"
 });
 
+
 ServiceConfiguration.configurations.insert({
-    service: 'twitter',
-	consumerKey: 'hhsLUrt8nUrefjeDRuUTrwsQN',
-	secret: '70F1khPQUT0FO2VnF1Q0YxiMnswjhRqD3lVGN0eMLM0KncOVaV'
+  service: 'twitter',
+  consumerKey: 'hhsLUrt8nUrefjeDRuUTrwsQN',
+  secret: '70F1khPQUT0FO2VnF1Q0YxiMnswjhRqD3lVGN0eMLM0KncOVaV'
 });
 
 //ServiceConfiguration.configurations.insert({

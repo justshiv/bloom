@@ -345,64 +345,6 @@ Home = React.createClass({
 
   },
 
-  drawTour(){
-    window.localStorage = false;
-    var tour = new Tour({
-      steps: [
-        {
-          element: "#demo",
-          title: "This starts Snapshare Demo Tour",
-          content: "Would you like to continue?",
-          placement: "left"
-
-        },
-        {
-          element: "#step-enable",
-          title: "Enable Services",
-          content: "Go here and enable all the social media sites that you prefer"
-        },
-        {
-          element: "#step-authenticate",
-          title: "Enable Services",
-          content: "Go here and enable all the social media sites that you prefer",
-          placement:"right"
-        },
-        {
-          element: "#step-remove",
-          title: "Disable Services",
-          content: "Click here if you would like to have a service removed"
-
-        },
-        {
-          element: "#step-upload",
-          title: "Start Photo Upload",
-          content: ""
-        },
-        {
-          element: "#step-select-service",
-          title: "Start Photo Upload",
-          content: ""
-        },
-        {
-          element: "#step-unselect-service",
-          title: "Start Photo Upload",
-          content: ""
-        },
-        {
-          element: "#step-post",
-          title: "Start Photo Upload",
-          content: ""
-        },
-        {
-          element: "#step-undo",
-          title: "Undo Photo Upload",
-          content: ""
-        }
-      ]});
-    tour.init();
-    tour.restart();
-  },
-
   render(){
     if (this.data.userLoading && this.data.servicesLoading) {
       return (
@@ -426,10 +368,14 @@ Home = React.createClass({
       <div className="">
         <div className="row">
           <div className="card">
-            <div className="card-content">
-              <h5>Active services</h5>
-              {this.renderServices()}
-              <a style={{float:'right'}} className="btn orange" href='/services'>Manage Services</a>
+            <div className="card-content row">
+              <div className="col s6">
+                <h5>Active services</h5>
+                {this.renderServices()}
+              </div>
+              <div className="col s6">
+                <a style={{float:'right'}} className="btn orange" href='/services'>Manage Services</a>
+              </div>
             </div>
           </div>
         </div>
@@ -438,7 +384,7 @@ Home = React.createClass({
               <div className="card-content" style={{paddingTop: '60px'}}>
 
                 <div className="fixed-action-btn click-to-toggle" style={{position: "relative", display:"inline-block", right: '0', bottom: '0'}}>
-                  <a className="waves-effect waves-light modal-trigger btn-floating btn-large orange" href="#modal1" onClick={this.drawModal}>
+                  <a className="waves-effect waves-light modal-trigger btn-floating btn-large orange" href="" onClick={this.drawModal}>
                     <i className="large mdi-content-add"></i>
                   </a>
                 </div>
@@ -470,12 +416,13 @@ Home = React.createClass({
 
               {this.renderImages()}
         </div>
-
-        <div className="btn waves-effect waves-light orange" onClick={ this.uploadImagePerService}>
-          POST TO Services<i className="mdi-content-send right"></i>
+        <div className="row ">
+          <div className="btn waves-effect waves-light orange" onClick={ this.uploadImagePerService}>
+            UPLOAD TO SERVICES<i className="material-icons mdi-content-send right"></i>
+          </div>
         </div>
-        <button id="demo" className="btn" onClick={this.drawTour}>Start Demo</button>
       </div>
+      //<button id="demo" className="btn" onClick={this.drawTour}>Start Demo</button>
     )
   }
 });//<div className="btn waves-effect waves-light" onClick={ this.removePerService}>
